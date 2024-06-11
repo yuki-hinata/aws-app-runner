@@ -18,11 +18,11 @@ services:
         volumes:
             - .:/var/www/html
         depends_on:
-            - mysql
+            - aws-test-mysql
 
-    mysql:
+    aws-test-mysql:
         image: mysql:8.0
-        container_name: mysql
+        container_name: aws-test-mysql
         ports:
             - "3306:3306"
         environment:

@@ -20,7 +20,7 @@ COPY . .
 RUN composer install
 
 # ポートのエクスポート
-EXPOSE 8000
+EXPOSE 8080
 
 # Laravelのサーバーを起動
-CMD php artisan serve --host=0.0.0.0 --port=8000
+CMD php -S 0.0.0.0:8080 -t public
